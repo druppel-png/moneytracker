@@ -3,6 +3,8 @@ package moneyTracker;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
 
 public class MainFrame {
 
@@ -36,8 +38,20 @@ public class MainFrame {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 500, 500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JButton btnImport = new JButton("Import");
+		btnImport.setBounds(10, 427, 89, 23);
+		frame.getContentPane().add(btnImport);
+		
+		JButton btnExport = new JButton("Export");
+		btnExport.setBounds(109, 427, 89, 23);
+		frame.getContentPane().add(btnExport);
+		
+		JButton btnSave = new JButton("Save");
+		btnSave.setBounds(208, 427, 89, 23);
+		frame.getContentPane().add(btnSave);
 	}
-
 }
